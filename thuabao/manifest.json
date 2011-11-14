@@ -1,0 +1,22 @@
+﻿{
+	"name": "淘海报",
+	"description": "淘海报是淘宝海报的简称，在这里你可以找到最详细的时尚搭配穿衣信息。",
+	"version": "1.0.3",
+	"icons": {
+		"128": "icon128.png",
+		"48":"icon48.png"
+	},
+	"app": {
+		"urls": [
+			"http://www.minifound.com/thb.html"
+		],
+		"launch": {
+			"web_url": "http://www.minifound.com/thb.html"
+		}
+	},
+	"permissions": [
+		"unlimitedStorage",
+		"notifications"
+	]
+}
+

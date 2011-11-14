@@ -1,0 +1,19 @@
+﻿.tsearch{padding:20px 20px 0;width:590px;}
+.tsearch-panel{margin-bottom:15px;}
+.tsearch-tool{border-top:1px solid #e7e7e7;padding:15px 0 20px 70px;position:relative;}
+.tsearch-tool li{float:left;}
+.tsearch-tool li a{border:1px solid #FFF;border-radius:5px;color:#505050;float:left;height:43px;line-height:43px;width:64px;padding-left:50px;position:relative;}
+.tsearch-tool li a:hover{background-color:#7f7f7f;border-color:#b3b3b3;color:#FFF;}
+.tsearch-tool li a i{background:url(../images/tool_icon.png);left:5px;height:37px;width:37px;position:absolute;top:3px;}
+.tsearch-tool li .hot i{background-position:0 0;}
+.tsearch-tool li .recharge i{background-position:0 -37px;}
+.tsearch-tool li .shop i{background-position:0 -74px;}
+.tsearch-tool li .info i{background-position:0 -111px;}
+.tsearch-tool .gradient-left,
+.tsearch-tool .gradient-right{background:url(../images/gradient.png);height:1px;width:228px;position:absolute;top:-1px;}
+.tsearch-tool .gradient-left{left:0;background-position:0 -1px;}
+.tsearch-tool .gradient-right{right:0;background-position:0 0;}
+.logo{background:url(../images/logo.png);display:inline-block;height:32px;width:114px;vertical-align:middle;}
+.keyword{background:#FFFFFF;border-color: #CCCCCC #999999 #999999 #CCCCCC;border-style: solid;border-width: 1px;box-shadow:1px 1px 2px #ccc;color:black;height: 25px;outline:none;padding: 5px 8px 0px 6px;width:350px;vertical-align:middle;}
+.submit{border:none;background:url(../images/search_btn.png);cursor:pointer;height:32px;width:102px;vertical-align:middle;}
+

@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>weather</title>
+	<link rel="stylesheet" href="css/style.css" />
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body>
+<canvas id="canvas" ></canvas>
+<script type="text/javascript">
+!function(win,doc,$){
+	var json0,json1,doit = 0;
+	function getWeather(id){
+		var url = 'http://m.weather.com.cn/data/'+id+'.html';
+		var url2 = 'http://www.weather.com.cn/data/sk/'+id+'.html';
+		send(url,function(json){
+			json0 = json;
+			win.localStorage.json0 = JSON.stringify(json);
+			doit++;
+			deal();
+		}).call(this,url2,function(json){
+			json1 = json;
+			win.localStorage.json1 = JSON.stringify(json);
+			doit++;
+			deal();
+		});
+		
+	}
+	function send(url,cb){
+		var xhr = new XMLHttpRequest();
+		xhr.open("GET", url, true);
+		xhr.onreadystatechange = function() {
+		  if (xhr.readyState == 4) {
+			var json = JSON.parse(xhr.responseText);
+			typeof cb==='function' && json.weatherinfo && cb(json.weatherinfo);
+			xhr = null;
+		  }
+		}
+		xhr.send();
+		return arguments.callee;
+	}
+	function deal(){
+		if(doit===2){
+			doit = 0;
+		}else{
+			return;
+		}
+		var img = new Image();
+		img.onload = function(){
+			var context = $('#canvas')[0].getContext('2d');
+			context.drawImage(img,0,0,19,19);
+			chrome.browserAction.setIcon({imageData:context.getImageData(0, 0, 19,19)});
+		};
+		img.src = "http://m.weather.com.cn/weather_img/"+json0.img1+".gif";
+		var strTip = json1.city+'现在温度:'+json1.temp+'℃\n今天：'+json0.weather1+json0.temp1+'\n明天：'+json0.weather2+json0.temp2+'\n后天：'+json0.weather3+json0.temp3;
+		strTip += "\n最后更新时间："+new Date().toLocaleTimeString();
+		chrome.browserAction.setTitle({title:strTip});
+		chrome.browserAction.setBadgeBackgroundColor({color:[0, 97, 255,100]});
+		chrome.browserAction.setBadgeText({text:json1.temp.toString()});
+	}
+	var init = function(){
+		chrome.browserAction.setBadgeText({text:'...'});
+		if(win.localStorage.cityid){
+			getWeather(win.localStorage.cityid);
+			return;
+		}
+		
+		$.getScript('http://61.4.185.48:81/g/',function(){
+			win.localStorage.cityid = id;
+			getWeather(id);
+		});
+	};
+	$(doc).ready(init);
+	
+	
+	win.setInterval(init,30*60*1000);
+	
+}(window,document,jQuery);
+</script>
+</body>
+</html>

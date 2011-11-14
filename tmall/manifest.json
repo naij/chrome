@@ -1,0 +1,21 @@
+﻿{
+	"name": "淘宝商城",
+	"description": "淘宝商城是亚洲最大购物网站淘宝网全新打造的B2C商城。淘宝商城提供100%品质保证的商品，7天无理由退货的售后服务，以及购物积分返现等优质服务。区别于淘宝网的是由商家企业作为卖家，所以有绝对的品质保证。",
+	"version": "1.0.1",
+	"icons": {
+		"128": "icon128.png",
+		"48":"icon48.png"
+	},
+	"app": {
+		"urls": [
+			"http://www.minifound.com/tmall.html"
+		],
+		"launch": {
+			"web_url": "http://www.minifound.com/tmall.html"
+		}
+	},
+	"permissions": [
+		"unlimitedStorage"
+	]
+}
+

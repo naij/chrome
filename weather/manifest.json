@@ -1,0 +1,12 @@
+{ 
+  "name": "Chrome Weather", 
+  "version": "0.1.0", 
+  "description": "weather.", 
+  "background_page": "background.html",
+  "browser_action": { 
+    "default_icon": "icon.png" ,
+    "default_title": "Weather",
+    "default_popup": "popup.html"
+  },
+	"permissions": [ "tabs", "http://*.weather.com.cn/" ]
+}

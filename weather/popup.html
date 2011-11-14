@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>weather</title>
+</head>
+<body>
+<table width='780px'>
+ <tr> 
+    <th rowspan='2' style="width:130px;text-align:center;"><h1 id="city"></h1></th> 
+    <th id="day1" width="130px"><strong>今&nbsp;&nbsp;天</strong></th>
+    <th id="day2" width="130px"><strong>明&nbsp;&nbsp;天</strong></th>
+    <th id="day3" width="130px"><strong>后&nbsp;&nbsp;天</strong></th>
+    <th id="day4" width="130px"><strong>第四天</strong></th>
+    <th id="day5" width="130px"><strong>第五天</strong></th>
+  </tr>
+  <tr>
+    <td style="text-align:center;"><img id="img1" src="#" alt="" width="50" height="50" /></td>
+    <td style="text-align:center;"><img id="img3" src="#" alt="" width="50" height="50" /></td>
+    <td style="text-align:center;"><img id="img5" src="#" alt="" width="50" height="50" /></td>
+    <td style="text-align:center;"><img id="img7" src="#" alt="" width="50" height="50" /></td>
+    <td style="text-align:center;"><img id="img9" src="#" alt="" width="50" height="50" /></td>
+  </tr>
+  <tr>
+    <td style="text-align:center;"><span class="spanAt">实时气温:</span><span id="temp"></span>℃</td> 
+    <td style="text-align:center"><span id="temp1"></span></td>
+    <td style="text-align:center"><span id="temp2"></span></td>
+    <td style="text-align:center"><span id="temp3"></span></td>
+    <td style="text-align:center"><span id="temp4"></span></td>
+   <td style="text-align:center"><span id="temp5"></span></td>
+  </tr>
+  <tr>
+    <td style="text-align:center;"><span class="spanAt">风向:</span><span id="WD"></span></td> 
+    <td style="text-align:center"><span id="weather1"></span></td>
+    <td style="text-align:center"><span id="weather2"></span></td>
+    <td style="text-align:center"><span id="weather3"></span></td>
+    <td style="text-align:center"><span id="weather4"></span></td>
+    <td style="text-align:center"><span id="weather5"></span></td>
+  </tr>
+  <tr>
+    <td style="text-align:center;"><span class="spanAt">湿度:</span><span id="SD"></span></td> 
+    <td style="text-align:center"><div id="wind1"></div></td>
+    <td style="text-align:center"><div id="wind2"></div></td>
+    <td style="text-align:center"><div id="wind3"></div></td>
+    <td style="text-align:center"><div id="wind4"></div></td>
+    <td style="text-align:center"><div id="wind5"></div></td>
+  </tr>
+</table>
+<script type="text/javascript">
+	var json1 = JSON.parse(localStorage.json1),json0 = JSON.parse(localStorage.json0);
+	['weather','wind','temp'].forEach(function(v){
+		var j = 6;
+		while(--j){
+			document.getElementById(v+j).innerHTML = json0[v+j];
+		}
+	});
+	for(var i=1,step=2;i<10;i+=step){
+		document.getElementById('img'+i).src = "http://m.weather.com.cn/weather_img/"+json0['img'+i]+".gif"
+	}
+	"city SD temp WD".replace(/[^ ]+/g,function(a){
+		document.getElementById(a).innerHTML = json1[a];
+	});
+	document.getElementById('cityid').href = json1.cityid;
+</script>
+</body>
+</html>
