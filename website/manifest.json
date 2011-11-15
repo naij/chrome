@@ -1,0 +1,12 @@
+﻿{  
+	"name": "chrome网址导航",  
+  	"version": "1.0.0",  
+  	"description": "淘宝搜索，从chrome工具栏直接打开搜索，并且包含了热卖商品、便民充值、店铺浏览、淘宝咨询等快捷功能",  
+  	"browser_action": {  
+		"default_icon": "icon.png",
+		"popup": "popup.html"
+  	},
+  	"icons":{
+		"48":"icon48x48.png"
+	}	
+}  

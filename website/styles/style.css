@@ -1,0 +1,31 @@
+﻿.website{padding:10px;width:760px;}
+.website .header{background-color:#77bb44;padding:0 10px;}
+.website .header .nav{float:left;}
+.website .header .nav li{color:#FFF;cursor:pointer;font-size:14px;font-weight:bold;float:left;height:40px;line-height:40px;margin-right:10px;padding:0 15px;}
+.website .header .nav li:hover{background-color:#2ca243;}
+.website .header .nav .ks-active{background-color:#2ca243;}
+
+.website .search{float:right;margin-top:7px;}
+.website .search .search-panel{background-color:#FFF;float:left;padding:4px 5px 5px 35px;position:relative;}
+.website .search .search-panel .search-engin{position:absolute;top:4px;left:5px;width:25px;padding:1px;}
+.website .search .search-panel .search-engin .engin-icon{height:16px;width:16px;background-image:url(../images/search_engin.png);display:inline-block;vertical-align:middle;}
+.website .search .search-panel .search-engin .baidu .engin-icon{background-position:0 0;}
+.website .search .search-panel .search-engin .google .engin-icon{background-position:0 -16px;}
+.website .search .search-panel .search-engin .bing .engin-icon{background-position:0 -32px;}
+.website .search .search-panel .search-engin .arrow{position:absolute;right:1px;top:7px;width:0;height:0;border-width:3px 3px;border-style:solid;border-color:#666 transparent transparent;font-size:0;line-height:0;}
+.website .search .search-panel .search-engin .select{background-color:#FFF;border:1px solid #bdbdbd;position:absolute;top:18px;left:-1px;width:150px;}
+.website .search .search-panel .search-engin .select li{cursor:pointer;padding:3px;}
+.website .search .search-panel .search-engin .select li:hover{background-color:#f0f0f0;}
+.website .search .search-panel .search-engin .select li .name{margin-left:15px;vertical-align:middle;}
+.website .search .search-panel .search-engin:hover{background-color:#f1f1f1;outline:1px solid #e0e0e0;}
+.website .search .search-panel .search-input input{border:none;height:16px;line-height:16px;outline:none;}
+.website .search .search-button input{background-image:url(../images/search_button.png);border:none;cursor:pointer;height:25px;width:25px;}
+.website .search .search-button{float:left;}
+
+
+.website .content .panel{margin-top:10px;overflow:hidden;height:auto !important;min-height:252px;}
+.website .content .panel ul{width:786px;}
+.website .content .panel li{float:left;margin:0 26px 10px 0;}
+.website .content .panel li a{color:#505050;float:left;background-color:#f0f0f0;height:26px;line-height:26px;width:105px;text-align:center;}
+.website .content .panel li a:hover{color:#FFF;background-color:#505050;}
+
