@@ -1,0 +1,12 @@
+﻿{  
+	"name": "便民充值",  
+  	"version": "1.0.0",  
+  	"description": "便民充值--充手机话费、充游戏点卡。",  
+  	"browser_action": {  
+		"default_icon": "icon.png",
+		"popup": "popup.html"
+  	},
+  	"icons":{
+		"48":"icon48x48.png"
+	}	
+}  

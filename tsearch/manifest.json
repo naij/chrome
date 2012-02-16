@@ -1,7 +1,7 @@
 ﻿{  
-	"name": "淘宝搜索",  
-  	"version": "1.0.4",  
-  	"description": "淘宝搜索，从chrome工具栏直接打开搜索，并且包含了热卖商品、便民充值、店铺浏览、淘宝咨询等快捷功能",  
+	"name": "S8-购物搜索",  
+  	"version": "1.0.0",  
+  	"description": "S8-购物搜索，从chrome工具栏直接打开搜索，并且包含了当下热门的购物站点",  
   	"browser_action": {  
 		"default_icon": "icon.png",
 		"popup": "popup.html"

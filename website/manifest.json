@@ -6,6 +6,13 @@
 		"default_icon": "icon.png",
 		"popup": "popup.html"
   	},
+	"content_scripts": [ {
+		"all_frames": true,
+		"matches": ["https://*/*", "http://*/*"],
+		"js": ["scripts/kissy-min.js", "scripts/keymaster-min.js", "scripts/webFunction.js"],
+		"css": ["styles/style-pop.css"],
+		"run_at": "document_end"
+	} ],
   	"icons":{
 		"48":"icon48x48.png"
 	}	

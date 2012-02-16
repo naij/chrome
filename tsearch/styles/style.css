@@ -1,19 +1,119 @@
-﻿.tsearch{padding:20px 20px 0;width:590px;}
-.tsearch-panel{margin-bottom:15px;}
-.tsearch-tool{border-top:1px solid #e7e7e7;padding:15px 0 20px 70px;position:relative;}
-.tsearch-tool li{float:left;}
-.tsearch-tool li a{border:1px solid #FFF;border-radius:5px;color:#505050;float:left;height:43px;line-height:43px;width:64px;padding-left:50px;position:relative;}
-.tsearch-tool li a:hover{background-color:#7f7f7f;border-color:#b3b3b3;color:#FFF;}
-.tsearch-tool li a i{background:url(../images/tool_icon.png);left:5px;height:37px;width:37px;position:absolute;top:3px;}
-.tsearch-tool li .hot i{background-position:0 0;}
-.tsearch-tool li .recharge i{background-position:0 -37px;}
-.tsearch-tool li .shop i{background-position:0 -74px;}
-.tsearch-tool li .info i{background-position:0 -111px;}
-.tsearch-tool .gradient-left,
-.tsearch-tool .gradient-right{background:url(../images/gradient.png);height:1px;width:228px;position:absolute;top:-1px;}
-.tsearch-tool .gradient-left{left:0;background-position:0 -1px;}
-.tsearch-tool .gradient-right{right:0;background-position:0 0;}
-.logo{background:url(../images/logo.png);display:inline-block;height:32px;width:114px;vertical-align:middle;}
-.keyword{background:#FFFFFF;border-color: #CCCCCC #999999 #999999 #CCCCCC;border-style: solid;border-width: 1px;box-shadow:1px 1px 2px #ccc;color:black;height: 25px;outline:none;padding: 5px 8px 0px 6px;width:350px;vertical-align:middle;}
-.submit{border:none;background:url(../images/search_btn.png);cursor:pointer;height:32px;width:102px;vertical-align:middle;}
+﻿/* 通用 */
+.logo{display:inline-block;height:32px;width:114px;vertical-align:middle;}
+.search-input{background:#FFFFFF;border:1px solid #CCCCCC ;color:black;margin-left:10px;outline:none;padding: 6px;width:390px;vertical-align:middle;}
+.submit-btn{border:none;cursor:pointer;height:32px;margin-left:10px;width:102px;vertical-align:middle;}
+.search-panel{margin-bottom:24px;}
 
+
+/* header */
+#header{background-color:#EEE;border:1px solid #dcdcdc;}
+#header ul{width:640px;margin:0 auto;}
+#header li{color:#666;cursor:pointer;float:left;margin:2px 5px 2px 0;padding:0 12px;}
+#header li:hover{background-color:#FFF;color:#f60;outline:1px solid #dcdcdc;}
+#header .ks-active{background-color:#FFF;color:#f60;outline:1px solid #dcdcdc;}
+
+/*  content */
+#content{margin:20px auto;padding:0 20px;width:640px;height:170px;overflow:hidden;}
+
+
+
+/* ====================淘宝================================== */
+.tb-search .logo,
+.tb-search .submit-btn,
+.tb-search .search-tool .channel li i,
+.tb-search .search-tool .toolbar li a{
+	background:url(../images/tb-search.png);
+}
+.tb-search .logo{background-position:0 0;}
+.tb-search .submit-btn{background-position:0 -39px;}
+.tb-search .search-tool .channel{background-color:#f3e8dd;}
+.tb-search .search-tool .channel li{float:left;}
+.tb-search .search-tool .channel li a{color:#505050;float:left;height:40px;line-height:40px;padding-left:56px;padding-right:26px;position:relative;}
+.tb-search .search-tool .channel li a:hover{background-color:#ecdfd2;}
+.tb-search .search-tool .channel li i{height:20px;width:20px;position:absolute;top:10px;left:25px;}
+.tb-search .search-tool .channel li .woman,
+.tb-search .search-tool .channel li .food{padding-right:28px;}
+.tb-search .search-tool .channel li .woman i{background-position:0 -76px;}
+.tb-search .search-tool .channel li .man i{background-position:-20px -76px;}
+.tb-search .search-tool .channel li .beauty i{background-position:-40px -76px;}
+.tb-search .search-tool .channel li .digital i{background-position:-60px -76px;}
+.tb-search .search-tool .channel li .house i{background-position:-80px -76px;}
+.tb-search .search-tool .channel li .food i{background-position:-100px -76px;}
+.tb-search .search-tool .toolbar li{float:left;}
+.tb-search .search-tool .toolbar li a{float:left;height:67px;width:160px;}
+.tb-search .search-tool .toolbar li .hot{background-position:0 -105px;}
+.tb-search .search-tool .toolbar li .recharge{background-position:0 -172px;}
+.tb-search .search-tool .toolbar li .shop{background-position:0 -239px;}
+.tb-search .search-tool .toolbar li .info{background-position:0 -306px;}
+.tb-search .search-panel{margin-bottom:31px;}
+
+
+
+/* =====================淘宝商城================================= */
+.tm-search .logo,
+.tm-search .submit-btn,
+.tm-search .search-tool .logo-list ul{
+	background:url(../images/tm-search.png);
+}
+.tm-search .logo{background-position:0 0;width:151px;}
+.tm-search .search-input{width:353px;}
+.tm-search .submit-btn{background-position:0 -39px;}
+.tm-search .search-tool .nav{background-color:#000;}
+.tm-search .search-tool .nav li{color:#FFF;cursor:pointer;float:left;height:24px;line-height:24px;width:80px;text-align:center;}
+.tm-search .search-tool .nav .ks-active{background-color:#bf0000;cursor:default;}
+.tm-search .search-tool .logo-list{float:left;}
+.tm-search .search-tool .logo-list ul{height:90px;width:500px;}
+.tm-search .search-tool .logo-list li{float:left;}
+.tm-search .search-tool .logo-list li a{color:#fff;display:block;height:30px;line-height:30px;width:100px;text-align:center;text-indent:-9999em;}
+.tm-search .search-tool .logo-list li a:hover{background-color:#cc0000;opacity:0.8;text-indent:0;}
+.tm-search .search-tool .clothes ul{background-position:0 -79px;}
+.tm-search .search-tool .shoes ul{background-position:0 -169px;}
+.tm-search .search-tool .accessories ul{background-position:0 -259px;}
+.tm-search .search-tool .cosmetic ul{background-position:0 -349px;}
+.tm-search .search-tool .sport ul{background-position:0 -439px;}
+.tm-search .search-tool .digital ul{background-position:0 -529px;}
+.tm-search .search-tool .home ul{background-position:0 -619px;}
+.tm-search .search-tool .food ul{background-position:0 -709px;}
+.tm-search .search-tool .entrance-list{float:right;padding:7px 12px;height:76px;width:116px;}
+.tm-search .search-tool .entrance-list li{float:left;margin-bottom:5px;}
+.tm-search .search-tool .entrance-list li:nth-child(even){margin-left:16px;}
+.tm-search .search-tool .entrance-list li a{border-radius:2px;float:left;height:22px;line-height:22px;width:50px;text-align:center;}
+.tm-search .search-tool .entrance-list li a:hover{color:#FFF;}
+.tm-search .search-tool .clothes .entrance-list{background-color:#d6b5b0;}
+.tm-search .search-tool .shoes .entrance-list{background-color:#c8b499;}
+.tm-search .search-tool .accessories .entrance-list{background-color:#8ddbd3;}
+.tm-search .search-tool .cosmetic .entrance-list{background-color:#debcc6;}
+.tm-search .search-tool .sport .entrance-list{background-color:#dbbaae;}
+.tm-search .search-tool .digital .entrance-list{background-color:#8db3b3;}
+.tm-search .search-tool .home .entrance-list{background-color:#9c99ac;}
+.tm-search .search-tool .food .entrance-list{background-color:#aac1a4;}
+.tm-search .search-tool .clothes .entrance-list li a{background-color:#a68580;}
+.tm-search .search-tool .shoes .entrance-list li a{background-color:#B5A38A;}
+.tm-search .search-tool .accessories .entrance-list li a{background-color:#7EC5BF;}
+.tm-search .search-tool .cosmetic .entrance-list li a{background-color:#C9AAB4;}
+.tm-search .search-tool .sport .entrance-list  li a{background-color:#C6A99D;}
+.tm-search .search-tool .digital .entrance-list li a{background-color:#80A4A4;}
+.tm-search .search-tool .home .entrance-list li a{background-color:#8E8C9C;}
+.tm-search .search-tool .food .entrance-list li a{background-color:#9BB095;}
+
+
+
+/*  =====================京东商城================================== */
+.jd-search .logo,
+.jd-search .submit-btn,
+.jd-search .search-tool .hot{
+	background:url(../images/jd-search.png);
+}
+.jd-search .logo{background-position:0 0;width:120px;}
+.jd-search .search-input{width:384px;}
+.jd-search .submit-btn{background-position:0 -39px;}
+.jd-search .search-tool{border:1px solid #dcdcdc;position:relative;}
+.jd-search .search-tool .list-view{margin:0 1px;}
+.jd-search .search-tool .list-item{float:left;height:106px;width:99px;margin:3px 30px;}
+.jd-search .search-tool .list-item .pic{margin-top:6px;text-align:center;}
+.jd-search .search-tool .list-item .pic img{height:60px;}
+.jd-search .search-tool .list-item .attr{color:#505050;margin-top:5px;}
+.jd-search .search-tool .list-item .attr a{color:#505050;}
+.jd-search .search-tool .list-item .attr a:hover{color:#cc0000;}
+.jd-search .search-tool .list-item .attr .price{color:#ff6600;}
+.jd-search .search-tool .hot{background-position:0 -78px;height:31px;width:38px;position:absolute;right:-1px;top:-1px;}
