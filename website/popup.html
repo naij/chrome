@@ -7,20 +7,14 @@
 <link rel="stylesheet" type="text/css" href="styles/style.css" />
 <script src="scripts/kissy-min.js" charset="utf-8"></script>
 <script src="scripts/switchable-min.js" charset="utf-8"></script>
-<script src="scripts/search-engin.js" charset="utf-8"></script>
+<script src="scripts/searchengin-min.js" charset="utf-8"></script>
+<script src="scripts/websitemap-min.js" charset="utf-8"></script>
 </head>
 
 <body>
 <div class="website" id="J_tabs">
 	<div class="header ks-clear">
-		<ul class="nav ks-switchable-nav">
-			<li class="ks-active">热门导航</li>
-			<li>视频</li>
-			<li>新闻</li>
-			<li>购物</li>
-			<li>体育</li>
-			<li>团购</li>
-		</ul>
+		<ul class="nav ks-switchable-nav"></ul>
 
 		<form id="J_searchForm" class="search" target="_blank" action="http://www.baidu.com/s">
 			<div class="search-panel">
@@ -37,239 +31,51 @@
 				</div>
 			</div>
 			<div class="search-button">
-				<input type="submit" value="" />
+				<input type="submit" value="" id="J_searchSubmit" />
 			</div>
 		</form>
 
 	</div>
 	<div class="content">
-		<div class="ks-switchable-content">
-			<div class="panel">
-				<ul class="ks-clear">
-					<li><a href="http://www.baidu.com/" target="_blank">百　度</a></li>
-					<li><a href="http://www.sina.com/" target="_blank">新　浪</a></li>
-					<li><a href="http://www.qq.com/" target="_blank">腾　讯</a></li>
-					<li><a href="http://www.sohu.com/" target="_blank">搜　狐</a></li>
-					<li><a href="http://www.163.com/" target="_blank">网　易</a></li>
-					<li><a href="http://www.google.com.hk/" target="_blank">谷　歌</a></li>
-
-					<li><a href="http://www.ifeng.com/" target="_blank">凤凰网</a></li>
-					<li><a href="http://www.xinhuanet.com/" target="_blank">新华网</a></li>
-					<li><a href="http://www.people.com.cn/" target="_blank">人民网</a></li>
-					<li><a href="http://www.zaobao.com/" target="_blank">联合早报</a></li>
-					<li><a href="http://www.cntv.cn/index.shtml" target="_blank">CNTV</a></li>
-					<li><a href="http://www.huanqiu.com/" target="_blank">环球网</a></li>
-
-					<li><a href="http://www.taobao.com/go/chn/tbk_channel/channelcode.php?pid=mm_16596457_2494158_9488014&eventid=101329" target="_blank">淘宝热卖</a></li>
-					<li><a href="http://www.360buy.com/" target="_blank">京东商城</a></li>
-					<li><a href="http://union.dangdang.com/transfer.php?from=P-297808&ad_type=10&sys_id=1&backurl=http://www.dangdang.com/" target="_blank">当当网</a></li>
-					<li><a href="http://www.amazon.cn/?_encoding=UTF8&tag=345502059-23&linkCode=ur2&camp=536&creative=3200" target="_blank">卓越亚马逊</a></li>
-					<li><a href="http://www.vancl.com?source=wolongxzg" target="_blank">凡客诚品</a></li>
-					<li><a href="http://www.letao.com/?source=wolongxzg" target="_blank">乐淘网</a></li>
-
-					<li><a href="http://weibo.com/" target="_blank">新浪微博</a></li>
-					<li><a href="http://www.renren.com/" target="_blank">人人网</a></li>
-					<li><a href="http://www.kaixin001.com/" target="_blank">开心网</a></li>
-					<li><a href="http://www.douban.com/" target="_blank">豆　瓣</a></li>
-					<li><a href="http://qzone.qq.com/" target="_blank">QQ空间</a></li>
-					<li><a href="http://www.tianya.cn/" target="_blank">天涯社区</a></li>
-
-					<li><a href="http://www.youku.com/" target="_blank">优酷网</a></li>
-					<li><a href="http://www.tudou.com/" target="_blank">土豆网</a></li>
-					<li><a href="http://www.ku6.com/" target="_blank">酷6网</a></li>
-					<li><a href="http://www.56.com/" target="_blank">56网</a></li>
-					<li><a href="http://www.joy.cn/" target="_blank">激动网</a></li>
-					<li><a href="http://www.qiyi.com/" target="_blank">奇艺网</a></li>
-
-					<li><a href="http://www.ganji.com/" target="_blank">赶集网</a></li>
-					<li><a href="http://www.58.com" target="_blank">58同城</a></li>
-					<li><a href="http://www.zol.com.cn/" target="_blank">中关村在线</a></li>
-					<li><a href="http://www.pconline.com.cn/" target="_blank">太平洋电脑</a></li>
-					<li><a href="http://www.autohome.com.cn/" target="_blank">汽车之家</a></li>
-					<li><a href="http://www.zhaopin.com/" target="_blank">智联招聘</a></li>
-
-					<li><a href="http://www.xiami.com/" target="_blank">虾　米</a></li>
-					<li><a href="http://www.top100.cn/" target="_blank">巨　鲸</a></li>
-					<li><a href="http://douban.fm/" target="_blank">豆瓣电台</a></li>
-					<li><a href="http://www.yinyuetai.com/" target="_blank">音悦TV</a></li>
-					<li><a href="http://ting.baidu.com/" target="_blank">ting!</a></li>
-					<li><a href="http://music.qq.com/" target="_blank">QQ音乐</a></li>
-				</ul>
-			</div>
-
-			<div class="panel" style="display:none;">
-				<ul class="ks-clear">
-					<li><a href="http://www.youku.com/" target="_blank">优酷网</a></li>
-					<li><a href="http://www.tudou.com/" target="_blank">土豆网</a></li>
-					<li><a href="http://www.ku6.com/" target="_blank">酷6网</a></li>
-					<li><a href="http://www.56.com/" target="_blank">56网</a></li>
-					<li><a href="http://www.joy.cn/" target="_blank">激动网</a></li>
-					<li><a href="http://www.qiyi.com/" target="_blank">奇艺网</a></li>
-
-					<li><a href="http://v.6.cn/" target="_blank">六间房</a></li>
-					<li><a href="http://v.qq.com/" target="_blank">腾讯宽频</a></li>
-					<li><a href="http://www.smgbb.cn/" target="_blank">东方宽频</a></li>
-					<li><a href="http://www.news.cn/video/index.htm" target="_blank">新华视频</a></li>
-					<li><a href="http://video.sina.com.cn/index.shtml" target="_blank">新浪播客</a></li>
-					<li><a href="http://v.ifeng.com/" target="_blank">凤凰宽频</a></li>
-
-					<li><a href="http://www.pptv.com/" target="_blank">PPTV</a></li>
-					<li><a href="http://www.xunlei.com/" target="_blank">迅雷看看</a></li>
-					<li><a href="http://www.pps.tv/" target="_blank">PPS</a></li>
-					<li><a href="http://www.uusee.com/" target="_blank">UUsee</a></li>
-					<li><a href="http://v.qq.com/index.html" target="_blank">QQLive</a></li>
-					<li><a href="http://gaoqing.baofeng.com/?s=Index-P720" target="_blank">暴风影音</a></li>
-
-					<li><a href="http://www.cntv.cn/" target="_blank">中国网络电视台</a></li>
-					<li><a href="http://www.imgo.tv/" target="_blank">芒果tv</a></li>
-					<li><a href="http://www.jstv.com/" target="_blank">江苏卫视</a></li>
-					<li><a href="http://open.163.com/" target="_blank">网易公开课</a></li>
-					<li><a href="http://www.m1905.com/vod/" target="_blank">m1905电影网</a></li>
-					<li><a href="http://www.letv.com/" target="_blank">乐视网</a></li>
-				</ul>
-			</div>
-
-			<div class="panel" style="display:none;">
-				<ul class="ks-clear">
-					<li><a href="http://news.sina.com.cn/" target="_blank">新浪新闻</a></li>
-					<li><a href="http://news.qq.com/" target="_blank">腾讯新闻</a></li>
-					<li><a href="http://news.ifeng.com/" target="_blank">凤凰资讯</a></li>
-					<li><a href="http://news.cntv.cn/" target="_blank">CCTV新闻</a></li>
-					<li><a href="http://news.sohu.com/" target="_blank">搜狐新闻</a></li>
-					<li><a href="http://news.163.com/" target="_blank">网易新闻</a></li>
-
-					<li><a href="http://www.china.com.cn/" target="_blank">中国网</a></li>
-					<li><a href="http://www.xinhuanet.com/" target="_blank">新华网</a></li>
-					<li><a href="http://www.people.com.cn/" target="_blank">人民网</a></li>
-					<li><a href="http://www.zaobao.com/" target="_blank">联合早报</a></li>
-					<li><a href="http://www.chinanews.com/" target="_blank">中国新闻网</a></li>
-					<li><a href="http://www.china.com/" target="_blank">中华网</a></li>
-
-					<li><a href="http://cn.reuters.com/" target="_blank">路透中文网</a></li>
-					<li><a href="http://paper.people.com.cn/" target="_blank">人民日报</a></li>
-					<li><a href="http://gb.cri.cn/" target="_blank">国际在线</a></li>
-					<li><a href="http://www.banyuetan.org/" target="_blank">半月谈</a></li>
-					<li><a href="http://www.gmw.cn/" target="_blank">光明网</a></li>
-					<li><a href="http://www.southcn.com/" target="_blank">南方网</a></li>
-
-					<li><a href="http://www.infzm.com/" target="_blank">南方周末</a></li>
-					<li><a href="http://www.takungpao.com/" target="_blank">大公报</a></li>
-					<li><a href="http://hsb.hsw.cn/" target="_blank">华商报</a></li>
-					<li><a href="http://www.dahe.cn/" target="_blank">大河报</a></li>
-					<li><a href="http://www.wenweipo.com/" target="_blank">香港文汇报</a></li>
-					<li><a href="http://www.nfcmag.com/" target="_blank">南风窗</a></li>
-
-					<li><a href="http://www.bjnews.com.cn/" target="_blank">新京报</a></li>
-					<li><a href="http://www.ycwb.com/" target="_blank">羊城晚报</a></li>
-					<li><a href="http://nd.oeeee.com/" target="_blank">南方都市报</a></li>
-					<li><a href="http://www.inewsweek.cn/" target="_blank">中国新闻周刊</a></li>
-					<li><a href="http://www.yangtse.com/" target="_blank">扬子晚报</a></li>
-					<li><a href="http://gb.chinareviewnews.com/" target="_blank">中国评论新闻</a></li>
-
-					<li><a href="http://chn.chosun.com/" target="_blank">朝鲜日报</a></li>
-					<li><a href="http://www.ruvr.ru/index.php?lng=pek" target="_blank">俄罗斯之声</a></li>
-					<li><a href="http://www.reuters.com/" target="_blank">英国路透社</a></li>
-					<li><a href="http://www.un.org/chinese/News/" target="_blank">联合国新闻</a></li>
-					<li><a href="http://www.cnn.com/" target="_blank">美国CNN</a></li>
-					<li><a href="http://www.time.com/" target="_blank">美国时代周刊</a></li>
-				</ul>
-			</div>
-
-			<div class="panel" style="display:none;">
-				<ul class="ks-clear">
-					<li><a href="http://www.taobao.com/" target="_blank">淘宝网</a></li>
-					<li><a href="http://s.click.taobao.com/t_9?p=mm_16596457_2494158_9488024&l=http%3A%2F%2Fwww.tmall.com" target="_blank">淘宝商城</a></li>
-					<li><a href="http://www.360buy.com/" target="_blank">京东商城</a></li>
-					<li><a href="http://union.dangdang.com/transfer.php?from=P-297808&ad_type=10&sys_id=1&backurl=http://www.dangdang.com/" target="_blank">当当网</a></li>
-					<li><a href="http://www.amazon.cn/?_encoding=UTF8&tag=345502059-23&linkCode=ur2&camp=536&creative=3200" target="_blank">卓越亚马逊</a></li>
-					<li><a href="http://www.vancl.com?source=wolongxzg" target="_blank">凡客诚品</a></li>
-
-					<li><a href="http://www.paipai.com/" target="_blank">拍拍网</a></li>
-					<li><a href="http://china.alibaba.com/" target="_blank">阿里巴巴</a></li>
-					<li><a href="http://www.newegg.com.cn/?cm_mmc=CPS-_-wolongxzg-_-wolongxzg-_-eventcode" target="_blank">新蛋网</a></li>
-					<li><a href="http://www.okbuy.com?from=trackingid_wolongxzg-23453" target="_blank">好乐买</a></li>
-					<li><a href="http://www.letao.com/?source=wolongxzg" target="_blank">乐淘网</a></li>
-					<li><a href="http://www.yihaodian.com/product/index.do?tracker_u=1052697570&merchant=1" target="_blank">一号店</a></li>
-					
-					<li><a href="http://www.m18.com/" target="_blank">麦考林</a></li>
-					<li><a href="http://www.taoxie.cn/" target="_blank">淘鞋网</a></li>
-					<li><a href="http://www.togj.com/" target="_blank">逛街网</a></li>
-					<li><a href="http://www.moonbasa.com" target="_blank">梦芭莎</a></li>
-					<li><a href="http://www.shishangqiyi.com/" target="_blank">时尚起义</a></li>
-					<li><a href="http://www.mbaobao.com/" target="_blank">麦包包</a></li>
-
-					<li><a href="http://www.lafaso.com/" target="_blank">乐蜂网</a></li>
-					<li><a href="http://www.shangpin.com/" target="_blank">尚品网</a></li>
-					<li><a href="http://www.hc360.com/" target="_blank">慧聪网</a></li>
-					<li><a href="http://www.eachnet.com/" target="_blank">易趣网</a></li>
-					<li><a href="http://www.baihuo.com/" target="_blank">百货网</a></li>
-					<li><a href="http://www.kongfz.com/" target="_blank">孔夫子旧书网</a></li>
-				</ul>
-			</div>
-
-			<div class="panel" style="display:none;">
-				<ul class="ks-fclear">
-					<li><a href="http://sports.sina.com.cn/" target="_blank">新浪竞技风暴</a></li>
-					<li><a href="http://sports.sohu.com/" target="_blank">搜狐体育</a></li>
-					<li><a href="http://sports.qq.com/" target="_blank">腾讯体育</a></li>
-					<li><a href="http://sports.163.com/" target="_blank">网易体育</a></li>
-					<li><a href="http://sports.tom.com/" target="_blank">TOM体育</a></li>
-					<li><a href="http://sports.cn.yahoo.com/" target="_blank">雅虎体育</a></li>
-
-					<li><a href="http://www.espnstar.com.cn/" target="_blank">ESPN中文网</a></li>
-					<li><a href="http://sports.cntv.cn/" target="_blank">cctv5</a></li>
-					<li><a href="http://www.zhibo8.com/" target="_blank">直播吧</a></li>
-					<li><a href="http://news.ifeng.com/sports/" target="_blank">凤凰体育</a></li>
-					<li><a href="http://www.sportscn.com/" target="_blank">华体网</a></li>
-					<li><a href="http://www.titan24.com/" target="_blank">体坛周报</a></li>
-
-					<li><a href="http://china.nba.com/" target="_blank">NBA中国官方站</a></li>
-					<li><a href="http://sports.sina.com.cn/nba/" target="_blank">新浪NBA</a></li>
-					<li><a href="http://sports.qq.com/nba/" target="_blank">腾讯NBA</a></li>
-					<li><a href="http://sports.163.com/nba/" target="_blank">网易NBA</a></li>
-					<li><a href="http://sports.sohu.com/nba.shtml" target="_blank">搜狐NBA</a></li>
-					<li><a href="http://www.cba.gov.cn/" target="_blank">中国篮协</a></li>
-
-					<li><a href="http://sports.sina.com.cn/global/" target="_blank">新浪国际足球</a></li>
-					<li><a href="http://sports.sohu.com/guojizuqiu.shtml" target="_blank">搜狐国际足球</a></li>
-					<li><a href="http://sports.qq.com/isocce/" target="_blank">腾讯国际足球</a></li>
-					<li><a href="http://www.espnstar.com.cn/new/international/" target="_blank">ESPN国际足球</a></li>
-					<li><a href="http://sports.163.com/world/" target="_blank">网易国际足球</a></li>
-					<li><a href="http://www.qxzqw.com/" target="_blank">天下足球网</a></li>
-				</ul>
-			</div>
-
-			<div class="panel" style="display:none;">
-				<ul class="ks-clear">
-					<li><a href="http://www.lashou.com/" target="_blank">拉手网</a></li>
-					<li><a href="http://www.meituan.com/" target="_blank">美　团</a></li>
-					<li><a href="http://www.24quan.com/" target="_blank">24券</a></li>
-					<li><a href="http://www.groupon.cn/" target="_blank">团宝网</a></li>
-					<li><a href="http://www.nuomi.com/" target="_blank">糯米网</a></li>
-					<li><a href="http://t.58.com/" target="_blank">58团购</a></li>
-
-					<li><a href="http://t.dianping.com/" target="_blank">大众点评团</a></li>
-					<li><a href="http://www.gaopeng.com/" target="_blank">高朋团购</a></li>
-					<li><a href="http://www.ftuan.com/" target="_blank">F　团</a></li>
-					<li><a href="http://www.55tuan.com/" target="_blank">窝窝团</a></li>
-					<li><a href="http://ju.taobao.com/" target="_blank">聚划算</a></li>
-					<li><a href="http://www.manzuo.com/" target="_blank">满座网</a></li>
-
-					<li><a href="http://www.shuangtuan.com/" target="_blank">爽　团</a></li>
-					<li><a href="http://www.miqi.cn/" target="_blank">米奇网</a></li>
-					<li><a href="http://tuan.aibang.com/" target="_blank">爱帮团</a></li>
-					<li><a href="http://www.meilishuo.com/tuan/" target="_blank">美丽说</a></li>
-					<li><a href="http://www.cocotuan.com/" target="_blank">可可团</a></li>
-					<li><a href="http://www.xilituan.com/" target="_blank">犀利团</a></li>
-				</ul>
-			</div>
-
-		</div>
+		<div class="ks-switchable-content"></div>	
 	</div>
 </div>
 
+<div class="guide ks-hidden" id="J_guideSlide">
+	<div class="slide-panel">
+		<ol class="slide-list"> 
+			<li><img src="images/guide_slide_01.png"></li>
+			<li><img src="images/guide_slide_02.png"></li> 
+			<li><img src="images/guide_slide_03.png"></li> 
+		</ol>
+	</div>
+	<ul class="slide-trigger">
+		<li class="ks-active">1</li>
+		<li class="">2</li>
+		<li class="">3</li>
+	</ul>
+	<span class="close" title="关闭向导" id="J_guideClose"></span>
+</div>
+
+
 <script>
-KISSY.use('switchable', function(S) {
+KISSY.use('xzg-searchengin,switchable', function(S) {
+
+	var con= S.one('.website'),websiteHtml = [],navHtml = [];
+
+	//网址列表
+	S.each(xzgwebsite,function(witem,index){
+		var tempHtml = [];
+
+		S.each(witem.cnt,function(citem){
+			tempHtml.push('<li><a href="' + citem.url + '" target="_blank"><i></i>' + citem.name + '</a></li>');
+		});
+		
+		websiteHtml.push('<div class="panel"' + (index == 0 ? '' : ' style="display:none;"')  +  '><ul class="ks-clear">' + tempHtml.join('\n') + '</ul></div>');
+		navHtml.push('<li class="' + witem.class + (index == 0 ? ' ks-active' : '') +'"><span><i></i>' + witem.cat + '</span></li>');
+	});
+	con.one('.ks-switchable-content').append(websiteHtml.join('\n'));
+	con.one('.ks-switchable-nav').append(navHtml.join('\n'));
 
 	//tab页切换
 	var tabs = S.Tabs('#J_tabs', {
@@ -277,7 +83,46 @@ KISSY.use('switchable', function(S) {
 		triggerType : 'click'
 	});
 
-	var search = new searchEngin();
+	var search = new S.XZG.Searchengin();
+
+	//设置向导
+	var isGuide = getInfo('isGuide');
+	if(!isGuide){
+		var windowHeight = S.one(window).height(),
+			guide = S.one('#J_guideSlide');
+
+		//遮罩层
+		mask = S.Node('<div>');
+		mask.addClass('mask');
+		mask.css({height:windowHeight});
+		S.one('body').prepend(mask);
+
+		guide.removeClass('ks-hidden');
+
+		S.Slide('#J_guideSlide', {
+			contentCls:'slide-list',
+			navCls: "slide-trigger",
+			effect: 'scrollx',
+			easing: 'easeOutStrong',
+			autoplay: false
+		}); 
+
+		S.one('#J_guideClose').on('click',function(e){
+			guide.addClass('ks-hidden');
+			mask.addClass('ks-hidden');
+			setInfo('isGuide','no');
+		});
+	}
+
+	//获取note
+	function getInfo(key){
+		return localStorage.getItem(key); 
+	}
+
+	//设置note
+	function setInfo(key,val){
+		localStorage.setItem(key, val);		   
+	}
 });	
 </script>
 

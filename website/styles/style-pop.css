@@ -1,52 +1,71 @@
-﻿/* webkit 浏览器的下拉条 */
-::-webkit-scrollbar {
-	width: 5px;
-	background: #f1f1f1;
+﻿/* icon */
+.xzg-website .xzg-nav .xzg-nav-list i{
+	background-image:url(http://www.minifound.com/image/chrome/website/nav_icon.png);
 }
-::-webkit-scrollbar-thumb {
-	background: #888888;
+
+.xzg-website .xzg-header .xzg-search .xzg-search-button a,
+.xzg-website .xzg-content .xzg-panel li a i{
+	background-image:url(http://www.minifound.com/image/chrome/website/metro_icon_sprite.png);
 }
-::-webkit-scrollbar-thumb:hover {
-	background: #777777;
-}
-::-webkit-scrollbar-corner {
-	background: #000;
-}
-body{background:url(../images/bg.png) top center no-repeat;}
-.wolongzg-mask{background-color:rgba(0,0,0,0.6);position:absolute;left:0;top:0;width:100%;height:955px;z-index:9998;}
-.wolongzg-website{width:880px;margin:100px auto;position:relative;z-index:9999;background:#fff;}
-.wolongzg-website .nav{background-color:#00a9da;}
-.wolongzg-website .nav li{color:#FFF;cursor:pointer;font-size:14px;float:left;height:25px;width:110px;padding:10px 0;text-align:center;}
-.wolongzg-website .nav li span{display:inline-block;height:25px;line-height:25px;padding-left:32px;position:relative;}
-.wolongzg-website .nav li i{height:25px;width:27px;position:absolute;left:0;top:0;background-image:url(../images/nav_icon.png);}
-.wolongzg-website .nav .common i{background-position:0 0;}
-.wolongzg-website .nav .video i{background-position:0 -25px;}
-.wolongzg-website .nav .news i{background-position:0 -50px;}
-.wolongzg-website .nav .shopping i{background-position:0 -75px;}
-.wolongzg-website .nav .sport i{background-position:0 -100px;}
-.wolongzg-website .nav .game i{background-position:0 -125px;}
-.wolongzg-website .nav .music i{background-position:0 -150px;}
-.wolongzg-website .nav .app i{background-position:0 -175px;}
-.wolongzg-website .nav li:hover{background-color:#019ecc;}
-.wolongzg-website .nav .ks-active{background-color:#0080a4;}
-.wolongzg-website .nav .ks-active:hover{background-color:#0080a4;}
-.wolongzg-website .header{height:90px;position:relative;}
-.wolongzg-website .header .title{border-left:10px solid #00a9da;font-size:24px;font-weight:normal;color:#00a9da;position:absolute;top:20px;left:0px;padding-left:20px;}
-.wolongzg-website .header .search{position:absolute;right:15px;top:20px;}
-.wolongzg-website .header .search .search-panel{display:inline-block;border:1px solid #cccccc;padding:7px 40px 7px 7px;margin-right:25px;vertical-align:middle;}
-.wolongzg-website .header .search .search-panel .search-input input {border:none;height:18px;line-height:18px;outline:none;width:500px;}
-.wolongzg-website .header .search .search-button{display:inline-block;vertical-align:middle;}
-.wolongzg-website .header .search .search-button input {background-image:url(../images/search_button_2.png);border:none;cursor:pointer;height:30px;width:30px;}
 
+/* reset */
+.xzg-website .ks-hidden { display: none; }
+.xzg-website .ks-invisible { visibility: hidden;}
+.xzg-website .ks-clear:after { content: '\20'; display: block; height: 0; clear: both; }
+.xzg-website *{-webkit-transition:none;-webkit-margin-before:0;-webkit-margin-after:0;-webkit-padding-start:0;font-size:1em;line-height:1;font-family:"Microsoft Yahei";margin:0;padding:0;}
+.xzg-website ul{display:block;}
+.xzg-website li{list-style-type:none;}
+.xzg-website a,.xzg-website a:link,.xzg-website a:visited{text-decoration:none;font-weight:normal;padding:0;margin:0;}
+.xzg-website i{border:none;}
 
+.xzg-website{width:880px;background:#fff;position:fixed;z-index:999999;top:-514px;left:0px;text-align:left;}
+.xzg-website .xzg-nav{background-color:#00a9da;}
+.xzg-website .xzg-nav .xzg-nav-list{color:#FFF;cursor:pointer;font-family:"Microsoft Yahei";font-size:14px;float:left;height:25px;width:110px;padding:10px 0;text-align:center;}
+.xzg-website .xzg-nav .xzg-nav-list span{display:inline-block;height:25px;line-height:25px;padding-left:32px;position:relative;}
+.xzg-website .xzg-nav .xzg-nav-list i{height:25px;width:27px;position:absolute;left:0;top:0;}
+.xzg-website .xzg-nav .xzg-common i{background-position:0 0;}
+.xzg-website .xzg-nav .xzg-video i{background-position:0 -25px;}
+.xzg-website .xzg-nav .xzg-news i{background-position:0 -50px;}
+.xzg-website .xzg-nav .xzg-shopping i{background-position:0 -75px;}
+.xzg-website .xzg-nav .xzg-sport i{background-position:0 -100px;}
+.xzg-website .xzg-nav .xzg-game i{background-position:0 -125px;}
+.xzg-website .xzg-nav .xzg-music i{background-position:0 -150px;}
+.xzg-website .xzg-nav .xzg-geek i{background-position:0 -175px;}
+.xzg-website .xzg-nav li:hover{background-color:#019ecc;}
+.xzg-website .xzg-nav .ks-active{background-color:#0080a4;}
+.xzg-website .xzg-nav .ks-active:hover{background-color:#0080a4;}
+.xzg-website .xzg-header{height:75px;position:relative;background:#f1f1f1;}
+.xzg-website .xzg-header .xzg-close{height:15px;width:30px;background-color:#00a9da;position:absolute;top:1px;right:1px;}
+.xzg-website .xzg-header .xzg-close:hover{background-color:#0080A4;}
+.xzg-website .xzg-header .xzg-close .xzg-x{height:7px;width:1px;background-color:#FFF;position:absolute;top:4px;left:15px;-webkit-transform: rotate(45deg);}
+.xzg-website .xzg-header .xzg-close .xzg-x-inverse{-webkit-transform: rotate(135deg);}
+.xzg-website .xzg-header .xzg-title{background:none;border-left:10px solid #00a9da;display:block;height:36px;width:205px;text-indent:0;font-size:24px;font-family:"Microsoft Yahei";line-height:1.5;font-weight:normal;color:#00a9da;position:absolute;top:20px;left:0px;padding-left:20px;}
+.xzg-website .xzg-header .xzg-title .sub-title{font-size:10px;color:#ccc;margin-left:10px;position:relative;bottom:3px;}
+.xzg-website .xzg-header .xzg-search{position:absolute;right:15px;top:20px;}
+.xzg-website .xzg-header .xzg-search .xzg-search-panel{display:inline-block;border:1px solid #bbb;background:#FFF;padding:7px 40px 7px 7px;margin-right:10px;vertical-align:middle;position:relative;z-index:10;}
+.xzg-website .xzg-header .xzg-search .xzg-search-panel .xzg-search-input input {border:none;height:18px;line-height:18px;outline:none;width:500px;}
+.xzg-website .xzg-header .xzg-search .xzg-search-panel .xzg-search-engin{position:absolute;top:7px;right:7px;width:25px;padding:1px;text-align:left;}
+.xzg-website .xzg-header .xzg-search .xzg-search-panel .xzg-search-engin .xzg-engin-icon{height:16px;width:16px;background-image:url(http://www.minifound.com/image/chrome/website/search_engin.png);display:inline-block;vertical-align:middle;}
+.xzg-website .xzg-header .xzg-search .xzg-search-panel .xzg-search-engin .baidu .xzg-engin-icon{background-position:0 0;}
+.xzg-website .xzg-header .xzg-search .xzg-search-panel .xzg-search-engin .google .xzg-engin-icon{background-position:0 -16px;}
+.xzg-website .xzg-header .xzg-search .xzg-search-panel .xzg-search-engin .bing .xzg-engin-icon{background-position:0 -32px;}
+.xzg-website .xzg-header .xzg-search .xzg-search-panel .xzg-search-engin .xzg-arrow{position:absolute;right:1px;top:7px;width:0;height:0;border-width:3px 3px;border-style:solid;border-color:#666 transparent transparent;font-size:0;line-height:0;}
+.xzg-website .xzg-header .xzg-search .xzg-search-panel .xzg-search-engin .xzg-select{background-color:#FFF;border:1px solid #bdbdbd;position:absolute;top:18px;left:-124px;width:150px;}
+.xzg-website .xzg-header .xzg-search .xzg-search-panel .xzg-search-engin .xzg-select li{cursor:pointer;padding:3px;}
+.xzg-website .xzg-header .xzg-search .xzg-search-panel .xzg-search-engin .xzg-select li:hover{background-color:#f0f0f0;}
+.xzg-website .xzg-header .xzg-search .xzg-search-engin .xzg-select li .xzg-name{margin-left:15px;vertical-align:middle;}
+.xzg-website .xzg-header .xzg-search .xzg-search-engin:hover{background-color:#f1f1f1;outline:1px solid #e0e0e0;}
+.xzg-website .xzg-header .xzg-search .xzg-search-button{display:inline-block;vertical-align:middle;}
+.xzg-website .xzg-header .xzg-search .xzg-search-button a{background-position:0 0;display:inline-block;height:30px;width:30px;}
+.xzg-website .xzg-content{padding:5px 15px 10px;}
+.xzg-website .xzg-content .xzg-panel{overflow:hidden;min-height:364px;}
+.xzg-website .xzg-content .xzg-panel ul{width:864px;}
+.xzg-website .xzg-content .xzg-panel .xzg-panel-list{float:left;margin:0 10px 10px 0;}
+.xzg-website .xzg-content .xzg-panel .xzg-panel-list a{color:#000;font-family:"Microsoft Yahei";float:left;height:40px;line-height:40px;font-size:14px;width:123px;padding-left:10px;position:relative;overflow:hidden;text-align:left;text-decoration:none;}
+.xzg-website .xzg-content .xzg-panel .xzg-panel-list a:hover{color:#FFF;background-color:#00a9da;}
+.xzg-website .xzg-content .xzg-panel .xzg-panel-list a i{position:absolute;top:5px;right:5px;height:30px;width:30px;background-position:0 -30px;}
 
-.wolongzg-website .content{padding:5px 15px 10px;}
-.wolongzg-website .content .panel{overflow:hidden;min-height:364px;}
-.wolongzg-website .content .panel ul{width:864px;}
-.wolongzg-website .content .panel li{float:left;margin:0 10px 10px 0;}
-.wolongzg-website .content .panel li a{color:#000;float:left;height:40px;line-height:40px;font-size:14px;width:118px;padding-left:15px;}
-.wolongzg-website .content .panel li a:hover{color:#FFF;background-color:#00a9da;}
-
-
+/* 遮罩层 */
+.xzg-mask{background-color:rgba(0,0,0,0.7);position:fixed;left:0;top:0;width:100%;height:0;z-index:999998;}
 
 
