@@ -1,0 +1,10 @@
+﻿body{
+	background-image:url(../images/override/wallpaper/override.png);
+	/*background-image:url(../images/override/wallpaper/override-02.png);*/
+	/*background-image:url(../images/override/wallpaper/override-03.png);*/
+	/*background-image:url(../images/override/wallpaper/override-04.png);*/
+	/*background-image:url(../images/override/wallpaper/override-05.png);*/
+	background-position:top center;
+	background-repeat:no-repeat;
+	background-color:#185663;
+}

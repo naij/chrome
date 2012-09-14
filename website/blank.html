@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>New Page</title>
+<script src="scripts/kissy-min.js" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css" href="styles/reset.css" />
+<link rel="stylesheet" type="text/css" href="styles/style-override.css" />
+</head>
+
+<body>
+	<a href="#!/home/a=b&c=d">home</a>
+	
+	<script type="text/javascript">
+	KISSY.ready(function(S){
+		var $=KISSY.all;
+		$(window).on("hashchange",function(){
+		    alert(location.hash) //-> 当前 hash 值
+		});
+	});
+	</script>
+</body>
+</html>
+
