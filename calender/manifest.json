@@ -9,7 +9,7 @@
     "content_scripts": [ {
         "all_frames": false,
         "matches": ["http://*/*"],
-        "js": ["scripts/jquery-min.js","scripts/wannianli-m.js"],
+        "js": ["scripts/jquery-min.js","scripts/wannianli-m-min.js"],
         "run_at": "document_end"
     } ],
     "icons":{
