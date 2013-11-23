@@ -1,22 +1,22 @@
 ﻿{  
-	"name": "微导航 for Chrome",  
-  	"version": "1.0.3",  
-  	"description": "微导航--最便捷的上网导航。及时收录包括视频、新闻、购物、体育、游戏、音乐、极客等各种分类的优秀网站，提供最简单便捷的上网导航服务。",  
-	"browser_action": {  
-		"default_icon": "icon.png",
-		"popup": "popup.html"
-  	},
-  	"chrome_url_overrides": {
-		"newtab": "app/index.html"
-	},
-	"content_scripts": [ {
-		"all_frames": false,
-		"matches": ["https://*/*", "http://*/*"],
-		"js": ["scripts/kissy-min.js","scripts/switchable-min.js", "scripts/keymaster-min.js", "scripts/searchengin-min.js", "scripts/websitemap-min.js", "scripts/webfunction-min.js"],
-		"css": ["styles/style-pop.css"],
-		"run_at": "document_end"
-	} ],
-  	"icons":{
-		"48":"icon48x48.png"
-	}
+    "name": "微导航 for Chrome",
+    "version": "1.0.4",
+    "manifest_version": 2,
+    "description": "微导航--最便捷的上网导航。及时收录包括视频、新闻、购物、体育、游戏、音乐、极客等各种分类的优秀网站，提供最简单便捷的上网导航服务。",
+    "browser_action": {
+        "default_icon": {
+            "19": "icon.png"
+        },
+        "default_popup": "popup.html"
+    },
+    // "content_scripts": [ {
+    //     "all_frames": false,
+    //     "matches": ["https://*/*", "http://*/*"],
+    //     "js": ["scripts/kissy-min.js","scripts/switchable-min.js", "scripts/keymaster-min.js", "scripts/searchengin-min.js", "scripts/websitemap-min.js", "scripts/webfunction-min.js"],
+    //     "css": ["styles/style-pop.css"],
+    //     "run_at": "document_end"
+    // } ],
+    "icons":{
+        "48":"icon48x48.png"
+    }
 }

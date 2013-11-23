@@ -1,17 +1,11 @@
 ﻿{  
     "name": "万年历",  
-    "version": "1.0.3",  
+    "version": "1.0.4",  
     "description": "日历和中国万年历，包含备忘录", 
     "browser_action": {  
         "default_icon": "icon.png",
         "popup": "popup.html"
     },
-    "content_scripts": [ {
-        "all_frames": false,
-        "matches": ["http://*/*"],
-        "js": ["scripts/jquery-min.js","scripts/wannianli-m-min.js"],
-        "run_at": "document_end"
-    } ],
     "icons":{
         "48":"icon_48x48.png"
     }   

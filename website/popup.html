@@ -1,131 +1,51 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<!DOCTYPE html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>网址导航</title>
-<link rel="stylesheet" type="text/css" href="styles/reset.css" />
-<link rel="stylesheet" type="text/css" href="styles/style.css" />
-<script src="scripts/kissy-min.js" charset="utf-8"></script>
-<script src="scripts/switchable-min.js" charset="utf-8"></script>
-<script src="scripts/searchengin-min.js" charset="utf-8"></script>
-<script src="scripts/websitemap-min.js" charset="utf-8"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>网址导航</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript" src="app/lib/kissy-min.js"></script>
+    <script type="text/javascript" src="app/lib/switch-min.js"></script>
+    <script type="text/javascript" src="app/lib/mustache.js"></script>
+    <script type="text/javascript" src="app/sitemap.js"></script>
+    <script type="text/javascript" src="app/app.js"></script>
 </head>
 
 <body>
-<div class="website" id="J_tabs">
-	<div class="header ks-clear">
-		<ul class="nav ks-switchable-nav"></ul>
-
-		<form id="J_searchForm" class="search" target="_blank" action="http://www.baidu.com/s">
-			<div class="search-panel">
-				<div class="search-engin">
-					<h3 class="baidu" id="J_selectHandle"><i class="engin-icon"></i><span class="arrow"></span></h3>
-					<ul class="select ks-hidden" id="J_selectPanel">
-						<li class="baidu"><i class="engin-icon"></i><span class="name">百度</span></li>
-						<li class="google"><i class="engin-icon"></i><span class="name">谷歌</span></li>
-						<li class="bing"><i class="engin-icon"></i><span class="name">必应</span></li>
-					</ul>
-				</div>
-				<div class="search-input">
-					<input type="text" name="word" id="J_searchInput" />
-				</div>
-			</div>
-			<div class="search-button">
-				<input type="submit" value="" id="J_searchSubmit" />
-			</div>
-		</form>
-
-	</div>
-	<div class="content">
-		<div class="ks-switchable-content"></div>	
-	</div>
-</div>
-
-<div class="guide ks-hidden" id="J_guideSlide">
-	<div class="slide-panel">
-		<ol class="slide-list"> 
-			<li><img src="images/guide_slide_01.png"></li>
-			<li><img src="images/guide_slide_02.png"></li> 
-			<li><img src="images/guide_slide_03.png"></li> 
-		</ol>
-	</div>
-	<ul class="slide-trigger">
-		<li class="ks-active">1</li>
-		<li class="">2</li>
-		<li class="">3</li>
-	</ul>
-	<span class="close" title="关闭向导" id="J_guideClose"></span>
-</div>
-
-
-<script>
-KISSY.use('xzg-searchengin,switchable', function(S) {
-
-	var con= S.one('.website'),websiteHtml = [],navHtml = [];
-
-	//网址列表
-	S.each(xzgwebsite,function(witem,index){
-		var tempHtml = [];
-
-		S.each(witem.cnt,function(citem){
-			tempHtml.push('<li><a href="' + citem.url + '" target="_blank"><i></i>' + citem.name + '</a></li>');
-		});
-		
-		websiteHtml.push('<div class="panel"' + (index == 0 ? '' : ' style="display:none;"')  +  '><ul class="ks-clear">' + tempHtml.join('\n') + '</ul></div>');
-		navHtml.push('<li class="' + witem.class + (index == 0 ? ' ks-active' : '') +'"><span><i></i>' + witem.cat + '</span></li>');
-	});
-	con.one('.ks-switchable-content').append(websiteHtml.join('\n'));
-	con.one('.ks-switchable-nav').append(navHtml.join('\n'));
-
-	//tab页切换
-	var tabs = S.Tabs('#J_tabs', {
-		switchTo : 0,
-		triggerType : 'click'
-	});
-
-	var search = new S.XZG.Searchengin();
-
-	//设置向导
-	var isGuide = getInfo('isGuide');
-	if(!isGuide){
-		var windowHeight = S.one(window).height(),
-			guide = S.one('#J_guideSlide');
-
-		//遮罩层
-		mask = S.Node('<div>');
-		mask.addClass('mask');
-		mask.css({height:windowHeight});
-		S.one('body').prepend(mask);
-
-		guide.removeClass('ks-hidden');
-
-		S.Slide('#J_guideSlide', {
-			contentCls:'slide-list',
-			navCls: "slide-trigger",
-			effect: 'scrollx',
-			easing: 'easeOutStrong',
-			autoplay: false
-		}); 
-
-		S.one('#J_guideClose').on('click',function(e){
-			guide.addClass('ks-hidden');
-			mask.addClass('ks-hidden');
-			setInfo('isGuide','no');
-		});
-	}
-
-	//获取note
-	function getInfo(key){
-		return localStorage.getItem(key); 
-	}
-
-	//设置note
-	function setInfo(key,val){
-		localStorage.setItem(key, val);		   
-	}
-});	
-</script>
-
+    <div class="website" id="J_tabs">
+        <div class="header clearfix">
+            <ul class="nav"></ul>
+        </div>
+        <div class="content">
+            <div class="cnt"></div>
+        </div>
+    </div>
+    <script type="text/tmpl" id="J_nav_tpl">
+        {{#siteMap}}
+        <li {{#first}}class="active"{{/first}}>{{nav}}</li>
+        {{/siteMap}}
+    </script>
+    <script type="text/tmpl" id="J_cnt_tpl">
+        {{#siteMap}}
+        <div class="panel" {{^first}}style="display:none;"{{/first}}>
+            <ul class="clearfix">
+                {{#cnt}}
+                <li>
+                    <a href="{{url}}" target="_blank" title="{{title}}">
+                        {{#first}}
+                        <img src="{{img}}" />
+                        {{/first}}
+                        {{^first}}
+                        <img data-image="{{img}}" />
+                        {{/first}}
+                    </a>
+                </li>
+                {{/cnt}}
+            </ul>
+        </div>
+        {{/siteMap}}
+    </script>
 </body>
 </html>
 
